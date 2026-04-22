@@ -9,6 +9,7 @@ import {
   statusOptions,
   tasks,
 } from './data/mockData'
+import { generateId } from './utils/taskUtils'
 
 function App() {
   const handleSearch = (searchTerm) => {
@@ -28,7 +29,8 @@ function App() {
   }
 
   const handleFormSubmit = (taskDraft) => {
-    const message = `New task stub: ${taskDraft.title || 'Untitled task'}`
+    const nextId = generateId(tasks)
+    const message = `New task stub #${nextId}: ${taskDraft.title || 'Untitled task'}`
 
     console.log(message, taskDraft)
     window.alert(
