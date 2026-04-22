@@ -11,6 +11,16 @@ describe('generateId', () => {
     expect(generateId(tasks)).toBe(4)
   })
 
+  test('returns 1 when the list does not contain numeric ids', () => {
+    const tasks = [{ id: 'abc' }, {}]
+
+    expect(generateId(tasks)).toBe(1)
+  })
+
+  test('returns 1 when the input is not an array', () => {
+    expect(generateId(null)).toBe(1)
+  })
+
   test('finds the next id even when tasks are not ordered', () => {
     const tasks = [{ id: 3 }, { id: 11 }, { id: 7 }]
 
@@ -60,5 +70,12 @@ describe('sortTasks', () => {
     const sortedTasks = sortTasks(samePriorityTasks, 'priority')
 
     expect(sortedTasks.map((task) => task.id)).toEqual([7, 5, 6])
+  })
+
+  test('returns a copied array when the sort type is unknown', () => {
+    const sortedTasks = sortTasks(tasks, 'manual')
+
+    expect(sortedTasks).toEqual(tasks)
+    expect(sortedTasks).not.toBe(tasks)
   })
 })
