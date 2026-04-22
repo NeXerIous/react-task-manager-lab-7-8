@@ -32,7 +32,7 @@ function App() {
 
     console.log(message, taskDraft)
     window.alert(
-      `${message}\nStatic mock data is required for this lab, so the board is not changed.`,
+      `Static mock data is required for this lab, so the board is not changed.`,
     )
   }
 

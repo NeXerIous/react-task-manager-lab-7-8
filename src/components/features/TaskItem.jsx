@@ -56,7 +56,7 @@ function TaskItem({ task, onTaskAction }) {
           className="button button--ghost button--small"
           onClick={() => onTaskAction('Move task', task)}
         >
-          Stub action
+          Move Task
         </button>
       </div>
     </article>

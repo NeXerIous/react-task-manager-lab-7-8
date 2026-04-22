@@ -1,6 +1,6 @@
 import Icon from '../ui/Icon'
 
-const userAvatar = 'https://i.pravatar.cc/88?img=20'
+const userAvatar = 'https://avatars.githubusercontent.com/u/260756296?v=4&size=64'
 
 function Header({ onSearch }) {
   const handleSubmit = (event) => {

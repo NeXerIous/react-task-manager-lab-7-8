@@ -1,11 +1,12 @@
 import Icon from '../ui/Icon'
+import logoMark from '../../assets/figma-icons/logo-mark.svg'
 
 function Sidebar({ links, activeLink, onNavigate, onLogout }) {
   return (
     <aside className="sidebar">
       <div>
         <div className="sidebar__brand">
-          <span className="sidebar__logo" aria-hidden="true"></span>
+          <img className="sidebar__logo" src={logoMark} alt="" aria-hidden="true" />
           <p className="sidebar__brand-text">TaskMinder.</p>
         </div>
 

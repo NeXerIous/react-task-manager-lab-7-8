@@ -58,16 +58,16 @@ function TaskBoardPage({
         <div className="task-board__toolbar">
           <div className="task-board__hint-icons" aria-hidden="true">
             <button type="button" className="icon-button">
-              <Icon name="dashboard" className="icon icon--sm" />
+              <Icon name="toolbar-dashboard" className="icon icon--sm" />
             </button>
             <button type="button" className="icon-button">
-              <Icon name="projects" className="icon icon--sm" />
+              <Icon name="toolbar-projects" className="icon icon--sm" />
             </button>
             <button type="button" className="icon-button">
-              <Icon name="tasks" className="icon icon--sm" />
+              <Icon name="toolbar-tasks" className="icon icon--sm" />
             </button>
             <button type="button" className="icon-button">
-              <Icon name="calendar" className="icon icon--sm" />
+              <Icon name="toolbar-calendar" className="icon icon--sm" />
             </button>
           </div>
           <Button
@@ -99,7 +99,6 @@ function TaskBoardPage({
                 through URL parameters.
               </p>
             </div>
-            <Icon name="sparkles" className="icon icon--lg" />
           </div>
 
           <div className="filter-panel__groups">
